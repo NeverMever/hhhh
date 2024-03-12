@@ -1,5 +1,8 @@
 # Discription
+# Goal of the work
+Learn how to install libraries, create game loop, create stars, output screensaver and write functions.
 
+# Code
 Choosing the data for varaibales 
 ```
 number_of_stars = 120
@@ -60,7 +63,9 @@ if event.type == pygame.quit: is a condition that checks the type of the event. 
         stars[i] = s
 ```
 It retrieves the current star's properties (x, y, z, and brightness), calculates the new x and y coordinates based on the ratio of the original x and y positions divided by the z position and scaled by 256. 
-Then decreases the z position by the value stored in the speed variable. If the star's x or y falls outside the boundaries of the screen, a new star is created using the new_star() function. The brightness of the star increases by 0.15 if it's less than 255, and this value is capped at 255 if it exceeds this value. Finally, the updated star properties are stored back into the list of stars at the current index.
+Then decreases the z position by the value stored in the speed variable. 
+
+If the star's x or y falls outside the boundaries of the screen, a new star is created using the new_star() function. The brightness of the star increases by 0.15 if it's less than 255, and this value is capped at 255 if it exceeds this value. Finally, the updated star properties are stored back into the list of stars at the current index.
 
 ```
 x = (s[0] * 256 / s[2]) + screen_width / 2
@@ -79,5 +84,22 @@ last_color_change = current_time
 star_colors[i] generates a random RGB color for the star.
 
 After a color change, the `last_color_change` value is updated to the current time to remember the time of the last color change.
+```
+pygame.draw.circle(screen, star_colors[i], (x, y), 3)
+```
+Creating a star.
 
+```
+pygame.display.flip()
+pygame.quit()
+```
+The pygame.display.flip() function updates the contents of the screen, displaying any changes that have been made since the previous update. This allows new images or user input changes to be displayed.
 
+The pygame.quit() function closes all open Pygame windows and frees the resources occupied by the game engine. This is used to correctly terminate the application when the game or application is terminated.
+# Conclusion 
+We learn how to:
+
+Set up the environment for correct operation
+Implement all the necessary functions so that the algorithm works at a basic level
+Add some “unique feature” of your choice, which will highlight your work among others and show that you really understand the principle of work
+Prepare the README.md file as a laboratory report and get a good grade.
