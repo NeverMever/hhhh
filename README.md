@@ -65,10 +65,10 @@ It retrieves the current star's properties (x, y, z, and brightness), calculates
 x = (s[0] * 256 / s[2]) + screen_width / 2
 y = (s[1] * 256 / s[2]) + screen_height / 2
 ```
-Now let's implement the movement and verification mechanism. We need to calculate its x and y coordinates for each star at each step in accordance with the perspective (z coordinate).\n",
-We can do this as discussed in lecture using the following formulas:\n",
-"$$X_s = \\frac{X*256}{Z} + X_c$$\n",
-"$$Y_s = \\frac{X*256}{Z} + Y_c$$\n",
-"\n",
+Now let's implement the movement and verification mechanism. We need to calculate its x and y coordinates for each star at each step in accordance with the perspective (z coordinate).
+We can do this as discussed in lecture using the following formulas:
+$$X_s = \\frac{X*256}{Z} + X_c$$
+$$Y_s = \\frac{X*256}{Z} + Y_c$$
+
 
 
