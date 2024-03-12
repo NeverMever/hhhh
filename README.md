@@ -59,7 +59,8 @@ if event.type == pygame.quit: is a condition that checks the type of the event. 
 
         stars[i] = s
 ```
-It retrieves the current star's properties (x, y, z, and brightness), calculates the new x and y coordinates based on the ratio of the original x and y positions divided by the z position and scaled by 256. Then decreases the z position by the value stored in the speed variable. If the star's x or y falls outside the boundaries of the screen, a new star is created using the new_star() function. The brightness of the star increases by 0.15 if it's less than 255, and this value is capped at 255 if it exceeds this value. Finally, the updated star properties are stored back into the list of stars at the current index.
+It retrieves the current star's properties (x, y, z, and brightness), calculates the new x and y coordinates based on the ratio of the original x and y positions divided by the z position and scaled by 256. 
+Then decreases the z position by the value stored in the speed variable. If the star's x or y falls outside the boundaries of the screen, a new star is created using the new_star() function. The brightness of the star increases by 0.15 if it's less than 255, and this value is capped at 255 if it exceeds this value. Finally, the updated star properties are stored back into the list of stars at the current index.
 
 ```
 x = (s[0] * 256 / s[2]) + screen_width / 2
