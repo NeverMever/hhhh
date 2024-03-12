@@ -16,7 +16,7 @@ def new_star() -> list:
 ```
 The first two values allow us to get a random point to generate a star.
 
-# Generating a star
+## Generating a star
 ```
 for i in range(0, number_of_stars):
     stars.append(new_star())
