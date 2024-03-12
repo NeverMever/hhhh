@@ -73,8 +73,11 @@ if current_time - last_color_change > color_change_time * 1000:
 star_colors[i] = (random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)) 
 last_color_change = current_time 
 ```
+
 "if" condition checks if a certain amount of time (in milliseconds) has passed since the last time the star's color was changed. If this condition is met, it is time to change the color.
+
 star_colors[i] generates a random RGB color for the star.
+
 After a color change, the `last_color_change` value is updated to the current time to remember the time of the last color change.
 
 
