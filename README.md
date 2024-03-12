@@ -66,10 +66,15 @@ Then decreases the z position by the value stored in the speed variable. If the 
 x = (s[0] * 256 / s[2]) + screen_width / 2
 y = (s[1] * 256 / s[2]) + screen_height / 2
 ```
-Now let's implement the movement and verification mechanism. We need to calculate its x and y coordinates for each star at each step in accordance with the perspective (z coordinate).
-We can do this as discussed in lecture using the following formulas:
-$$X_s = \\frac{X*256}{Z} + X_c$$
-$$Y_s = \\frac{X*256}{Z} + Y_c$$
+For counting the x and y coordinates we need to use formular form the lecture.
 
+```
+if current_time - last_color_change > color_change_time * 1000:
+star_colors[i] = (random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)) 
+last_color_change = current_time 
+```
+"if" condition checks if a certain amount of time (in milliseconds) has passed since the last time the star's color was changed. If this condition is met, it is time to change the color.
+star_colors[i] generates a random RGB color for the star.
+After a color change, the `last_color_change` value is updated to the current time to remember the time of the last color change.
 
 
