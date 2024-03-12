@@ -16,7 +16,7 @@ def new_star() -> list:
 ```
 The first two values allow us to get a random point to generate a star.
 
-## Generating a star
+# Generating a star
 ```
 for i in range(0, number_of_stars):
     stars.append(new_star())
@@ -26,3 +26,23 @@ star_colors = [(random.randint(0, 255), random.randint(0, 255),
 color_change_time = 1  # Частота изменения цвета в секундах
 last_color_change = pygame.time.get_ticks() # Присваивается текущее время в миллисекундах с помощью `pygame.time.get_ticks()`
 ```
+# Base structure of the code
+
+```
+while not done:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            done = True
+
+    screen.fill((0, 0, 0))
+    current_time = pygame.time.get_ticks() # Declare current time
+```
+for event in pygame.event.get(): - is a loop that loops through a list of events created by Pygame. 
+if event.type == pygame.quit: is a condition that checks the type of the event. In this case, we are checking if the event is a request to quit the application.
+
+
+
+
+
+
+
